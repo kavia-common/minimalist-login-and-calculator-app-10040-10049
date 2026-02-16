@@ -1,0 +1,4 @@
+{
+    "command": "./gradlew test",
+    "working_directory": "/home/kavia/workspace/code-generation/minimalist-login-and-calculator-app-10040-10049/android_frontend"
+}
