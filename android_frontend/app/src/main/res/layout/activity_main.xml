@@ -1,0 +1,326 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.OceanProfessional.ScreenRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Simple header bar -->
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_16"
+        android:background="@color/op_surface"
+        android:elevation="@dimen/elevation_2">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            style="@style/Theme.OceanProfessional.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/headerSubtitle"
+            style="@style/Theme.OceanProfessional.Text.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="Sign in to continue" />
+    </LinearLayout>
+
+    <!-- Content container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/space_16">
+
+        <!-- LOGIN SCREEN -->
+        <ScrollView
+            android:id="@+id/loginContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/Theme.OceanProfessional.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Theme.OceanProfessional.Text.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Login" />
+
+                    <EditText
+                        android:id="@+id/loginEmail"
+                        style="@style/Theme.OceanProfessional.Input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/loginPassword"
+                        style="@style/Theme.OceanProfessional.Input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:hint="Password"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:id="@+id/loginError"
+                        style="@style/Theme.OceanProfessional.Text.Error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:visibility="gone"
+                        tools:text="Invalid email or password." />
+
+                    <Button
+                        android:id="@+id/loginButton"
+                        style="@style/Theme.OceanProfessional.Button.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:text="Login" />
+
+                    <Button
+                        android:id="@+id/goToSignUpButton"
+                        style="@style/Theme.OceanProfessional.Button.Secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:text="Create an account" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- SIGN-UP SCREEN -->
+        <ScrollView
+            android:id="@+id/signupContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/Theme.OceanProfessional.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Theme.OceanProfessional.Text.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up" />
+
+                    <EditText
+                        android:id="@+id/signupEmail"
+                        style="@style/Theme.OceanProfessional.Input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/signupPassword"
+                        style="@style/Theme.OceanProfessional.Input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:hint="Password (min 6 chars)"
+                        android:inputType="textPassword" />
+
+                    <EditText
+                        android:id="@+id/signupConfirmPassword"
+                        style="@style/Theme.OceanProfessional.Input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:hint="Confirm password"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:id="@+id/signupError"
+                        style="@style/Theme.OceanProfessional.Text.Error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:visibility="gone"
+                        tools:text="Passwords do not match." />
+
+                    <Button
+                        android:id="@+id/signupButton"
+                        style="@style/Theme.OceanProfessional.Button.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:text="Create account" />
+
+                    <Button
+                        android:id="@+id/backToLoginButton"
+                        style="@style/Theme.OceanProfessional.Button.Secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:text="Back to login" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- DASHBOARD SCREEN -->
+        <ScrollView
+            android:id="@+id/dashboardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/Theme.OceanProfessional.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Theme.OceanProfessional.Text.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calculator Dashboard" />
+
+                    <TextView
+                        android:id="@+id/welcomeText"
+                        style="@style/Theme.OceanProfessional.Text.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_12"
+                        tools:text="Welcome, user@example.com" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/numberA"
+                            style="@style/Theme.OceanProfessional.Input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Number A"
+                            android:inputType="numberDecimal|numberSigned" />
+
+                        <EditText
+                            android:id="@+id/numberB"
+                            style="@style/Theme.OceanProfessional.Input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_12"
+                            android:hint="Number B"
+                            android:inputType="numberDecimal|numberSigned" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_12"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/addButton"
+                                style="@style/Theme.OceanProfessional.Button.Primary"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="+" />
+
+                            <Button
+                                android:id="@+id/subButton"
+                                style="@style/Theme.OceanProfessional.Button.Primary"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_12"
+                                android:layout_weight="1"
+                                android:text="−" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_12"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/mulButton"
+                                style="@style/Theme.OceanProfessional.Button.Primary"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="×" />
+
+                            <Button
+                                android:id="@+id/divButton"
+                                style="@style/Theme.OceanProfessional.Button.Primary"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_12"
+                                android:layout_weight="1"
+                                android:text="÷" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/calcError"
+                            style="@style/Theme.OceanProfessional.Text.Error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_12"
+                            android:visibility="gone"
+                            tools:text="Please enter valid numbers." />
+
+                        <TextView
+                            android:id="@+id/resultText"
+                            style="@style/Theme.OceanProfessional.Text.Result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_16"
+                            tools:text="Result: 42" />
+
+                        <Button
+                            android:id="@+id/logoutButton"
+                            style="@style/Theme.OceanProfessional.Button.Secondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_16"
+                            android:text="Logout" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</LinearLayout>

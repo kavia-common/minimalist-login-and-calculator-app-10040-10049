@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+
+    <dimen name="radius_12">12dp</dimen>
+
+    <dimen name="elevation_2">2dp</dimen>
+</resources>

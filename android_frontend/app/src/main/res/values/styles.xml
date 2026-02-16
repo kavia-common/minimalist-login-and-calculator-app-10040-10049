@@ -1,0 +1,73 @@
+<resources>
+    <!-- Lightweight theme-ish style collection (we're not relying on Material components) -->
+
+    <!-- Base anchors (required by aapt2 on some toolchains when using dotted style names) -->
+    <style name="Theme" />
+    <style name="Theme.OceanProfessional" />
+    <style name="Theme.OceanProfessional.Text" />
+    <style name="Theme.OceanProfessional.Button" />
+
+    <style name="Theme.OceanProfessional.ScreenRoot">
+        <item name="android:background">@color/op_background</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Card">
+        <item name="android:background">@drawable/op_card_bg</item>
+        <item name="android:padding">@dimen/space_16</item>
+        <item name="android:elevation">@dimen/elevation_2</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Input">
+        <item name="android:background">@drawable/op_input_bg</item>
+        <item name="android:textColor">@color/op_text</item>
+        <item name="android:textColorHint">@color/op_text_muted</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Button.Primary">
+        <item name="android:background">@drawable/op_button_primary_bg</item>
+        <item name="android:textColor">@color/op_surface</item>
+        <item name="android:paddingTop">@dimen/space_12</item>
+        <item name="android:paddingBottom">@dimen/space_12</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Button.Secondary">
+        <item name="android:background">@drawable/op_button_secondary_bg</item>
+        <item name="android:textColor">@color/op_primary</item>
+        <item name="android:paddingTop">@dimen/space_12</item>
+        <item name="android:paddingBottom">@dimen/space_12</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Text.Title">
+        <item name="android:textColor">@color/op_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Text.Subtitle">
+        <item name="android:textColor">@color/op_text_muted</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Text.SectionTitle">
+        <item name="android:textColor">@color/op_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Text.Body">
+        <item name="android:textColor">@color/op_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Text.Error">
+        <item name="android:textColor">@color/op_error</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Theme.OceanProfessional.Text.Result">
+        <item name="android:textColor">@color/op_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
