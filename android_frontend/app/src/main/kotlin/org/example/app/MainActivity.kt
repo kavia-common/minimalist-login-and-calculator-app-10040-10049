@@ -128,7 +128,7 @@ class MainActivity : Activity() {
 
     private fun showLogin() {
         headerTitle.text = getString(R.string.app_name)
-        headerSubtitle.text = "Sign in to continue"
+        headerSubtitle.text = getString(R.string.app_name)
 
         loginContainer.visibility = View.VISIBLE
         signupContainer.visibility = View.GONE
@@ -136,8 +136,8 @@ class MainActivity : Activity() {
     }
 
     private fun showSignUp() {
-        headerTitle.text = "Create account"
-        headerSubtitle.text = "Join with your email"
+        headerTitle.text = getString(R.string.app_name)
+        headerSubtitle.text = getString(R.string.app_name)
 
         loginContainer.visibility = View.GONE
         signupContainer.visibility = View.VISIBLE
@@ -145,8 +145,8 @@ class MainActivity : Activity() {
     }
 
     private fun showDashboard(email: String) {
-        headerTitle.text = "Dashboard"
-        headerSubtitle.text = "Ocean Professional"
+        headerTitle.text = getString(R.string.app_name)
+        headerSubtitle.text = getString(R.string.app_name)
 
         currentUserEmail = email
         welcomeText.text = "Welcome, $email"
